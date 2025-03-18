@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestion des Employés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-blue-50">
+    <div class="container mx-auto px-4 py-4">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-4">
+            <button class="text-2xl">☰</button>
+            <div class="flex items-center">
+                <div class="relative w-full max-w-md">
+                    <div class="flex items-center border rounded-md bg-white">
+                        <div class="px-3 py-1 bg-blue-900 text-white rounded-l-md flex items-center">
+                            <span>All Candidates</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </div>
+                        <input type="text" placeholder="Search..." class="w-full px-3 py-2 focus:outline-none">
+                        <button class="px-3 text-gray-500"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="flex ml-4">
+                    <div class="relative mr-2">
+                        <div class="bg-blue-700 rounded-full p-2">
+                            <i class="fas fa-bell text-white"></i>
+                        </div>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+                    </div>
+                    <div class="relative mr-2">
+                        <div class="bg-yellow-500 rounded-full p-2">
+                            <i class="fas fa-wrench text-white"></i>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-green-600 rounded-full p-2">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">1</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcrumbs -->
+        <div class="text-sm mb-4">
+            <span class="text-gray-700 font-medium">Dashboard / Employee Management</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-md p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-bold text-lg">Employee Management</h2>
+                <div class="flex space-x-2">
+                    <button class="p-2 rounded bg-gray-100">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                    <button class="p-2 rounded bg-green-600 text-white flex items-center">
+                        <i class="fas fa-download mr-1"></i>
+                        <span>Export</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table for larger screens -->
+            <div class="hidden md:block overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-blue-100">
+                        <tr>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Name(s)</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Dept</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Job Title</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Start Date</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Category</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Gender</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-2 px-4 text-sm">yeabsire abebe</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Female</td>
+                            <td class="py-2 px-4 text-sm">
+                                <div class="flex flex-col space-y-1">
+                                    <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                                    <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">View Profile</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-blue-50 border-b">
+                            <td class="py-2 px-4 text-sm">feven tesfaye</td>
+                            <td class="py-2 px-4 text-sm">IT</td>
+                            <td class="py-2 px-4 text-sm">Backend Engineer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Remote</td>
+                            <td class="py-2 px-4 text-sm">Female</td>
+                            <td class="py-2 px-4 text-sm">
+                                <div class="flex flex-col space-y-1">
+                                    <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                                    <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Edit Profile</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 px-4 text-sm">AMANUEL BEYENE</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Male</td>
+                            <td class="py-2 px-4 text-sm">
+                                <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-blue-50 border-b">
+                            <td class="py-2 px-4 text-sm">tedla atalay</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Male</td>
+                            <td class="py-2 px-4 text-sm">
+                                <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 px-4 text-sm">redwan husein</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Male</td>
+                            <td class="py-2 px-4 text-sm">
+                                <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-blue-50 border-b">
+                            <td class="py-2 px-4 text-sm">abel beyene</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Male</td>
+                            <td class="py-2 px-4 text-sm">
+                                <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 px-4 text-sm">temesgen melak</td>
+                            <td class="py-2 px-4 text-sm">Design</td>
+                            <td class="py-2 px-4 text-sm">UI UX Designer</td>
+                            <td class="py-2 px-4 text-sm">28/04/2022</td>
+                            <td class="py-2 px-4 text-sm">Full time</td>
+                            <td class="py-2 px-4 text-sm">Male</td>
+                            <td class="py-2 px-4 text-sm">
+                                <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs">Actions</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cards for mobile screens -->
+            <div class="md:hidden space-y-4">
+                <!-- Employee 1 -->
+                <div class="bg-white border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">yeabsire abebe</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Female</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Employee 2 -->
+                <div class="bg-blue-50 border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">feven tesfaye</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Female</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">IT</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">Backend Engineer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Remote</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Edit Profile</button>
+                    </div>
+                </div>
+
+                <!-- Employee 3 -->
+                <div class="bg-white border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">AMANUEL BEYENE</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Male</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                    </div>
+                </div>
+
+                <!-- Employee 4 -->
+                <div class="bg-blue-50 border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">tedla atalay</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Male</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                    </div>
+                </div>
+
+                <!-- Employee 5 -->
+                <div class="bg-white border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">redwan husein</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Male</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                    </div>
+                </div>
+
+                <!-- Employee 6 -->
+                <div class="bg-blue-50 border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">abel beyene</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Male</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                    </div>
+                </div>
+
+                <!-- Employee 7 -->
+                <div class="bg-white border rounded-md p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold">temesgen melak</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Male</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div>
+                            <p class="text-xs text-gray-500">Department</p>
+                            <p class="text-sm">Design</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Job Title</p>
+                            <p class="text-sm">UI UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Start Date</p>
+                            <p class="text-sm">28/04/2022</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Category</p>
+                            <p class="text-sm">Full time</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-900 text-white py-1 px-3 rounded text-xs flex-1">Actions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
